@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+body {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.form-control:focus {
+  border: 1px solid #d8d8d8;
+  box-shadow: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.sidebar {
+  width: 75%;
+  height: 100vh;
+  background-color: #f9f9f9;
+  transform: translateX(-150%);
+  transition: transform 0.3s ease-in-out;
+  border-right: 1px solid #d8d8d8;
+  z-index: 999;
+  overflow-y: auto;
+  /* Custom Scrollbar */
+}
+.sidebar::-webkit-scrollbar {
+  width: 1px;
+}
+.sidebar::-webkit-scrollbar-track {
+  background: #f9f9f9;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background: #d8d8d8; /* Warna thumb scrollbar */
+}
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #d8d8d8; /* Warna thumb saat hover */
+}
+.sidebar .brand-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sidebar .brand-container .navbar-brand {
+  color: #EF85D1;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.sidebar .brand-container .btn {
+  font-size: 1.2rem;
+  color: #121212;
+}
+.sidebar .brand-container .btn:active {
+  background-color: transparent;
+  border: 0;
+}
+.sidebar .navbar-nav .nav-title {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+.sidebar .navbar-nav .nav-item .nav-link {
+  font-size: 1.2rem;
+  padding: 0.3rem 0.5rem;
+  margin: 0.3rem 0;
+  transition: 0.3s ease-in-out;
+  border: 1px solid transparent;
+}
+.sidebar .navbar-nav .nav-item .nav-link.active {
+  border: 1px solid #d8d8d8;
+  border-radius: 0.2rem;
+  transform: translate(-3px, -3px);
+  box-shadow: 1px 1px 0px 0px #121212;
+}
+.sidebar .navbar-nav .nav-item .nav-link:hover {
+  border: 1px solid #d8d8d8;
+  border-radius: 0.2rem;
+  transition: 0.3s ease-in-out;
+  box-shadow: 1px 1px 0px 0px #121212;
+  transform: translate(-3px, -3px);
+}
+.sidebar .navbar-nav .nav-item .nav-link span {
+  font-size: 0.9rem;
+}
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.content {
+  width: 100%;
+}
+
+.navbar {
+  border-bottom: 1px solid #d8d8d8;
+  z-index: 998;
+  width: 100%;
+  background-color: #ffffff;
+}
+.navbar .sidebar-toggler {
+  text-decoration: none;
+  color: #121212;
+}
+.navbar .btn-icon {
+  border: 1px solid #d8d8d8;
+  border-radius: 0.4rem;
+  padding: 0.3rem 0.6rem;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+  transition: 0.3s ease-in-out;
+}
+.navbar .btn-icon:hover {
+  transition: 0.3s ease-in-out;
+  box-shadow: 1px 1px 0px 0px #121212;
+  transform: translate(-3px, -3px);
+}
+.navbar .icon-container .form-container {
+  border: 1px solid #d8d8d8;
+  border-radius: 0.4rem;
+}
+.navbar .icon-container .form-container .form-control {
+  border: 0;
+  font-size: 1rem;
+}
+.navbar .icon-container .form-container .form-control:focus {
+  border: 0;
+}
+.navbar .icon-container .form-container .btn-icon {
+  border: 0;
+}
+.navbar .icon-container .form-container .btn-icon:hover {
+  transition: 0.3s ease-in-out;
+  box-shadow: none;
+  transform: translate(0);
+}
+
+.main-content .card h5 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.main-content .card .dropdown .card-more {
+  font-size: 1.1rem;
+  color: #121212;
+  font-weight: 700;
+}
+.main-content .card .dropdown .dropdown-menu .dropdown-item {
+  font-size: 0.9rem;
+  margin: 0.3rem auto;
+}
+.main-content .card .dropdown .dropdown-menu .dropdown-item.danger {
+  color: #ff0000;
+}
+.main-content .card .card-content h6 {
+  font-size: 0.9rem;
+  color: #6c6c6c;
+  font-weight: 500;
+}
+.main-content .card .card-content h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.main-content .card .card-content h1 small {
+  font-size: 1.5rem;
+  color: #939393;
+  font-weight: 400;
+}
+.main-content .card .card-content small.time {
+  font-size: 0.8rem;
+  color: #939393;
+}
+
+.modal {
+  z-index: 1050; /* Z-index default Bootstrap untuk modal */
+}
+
+.modal-backdrop.show {
+  display: none;
+}
+
+@media screen and (min-width: 576px) {
+  .sidebar {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .sidebar {
+    width: 35%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .sidebar {
+    width: 25%;
+    transform: translateX(0);
+  }
+  .sidebar .brand-container .navbar-brand {
+    font-size: 5vw;
+  }
+  .navbar {
+    margin-left: 25%;
+    width: 75%;
+  }
+  .content {
+    width: 75%;
+    margin-left: 25%;
+  }
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,295 @@
+// font 
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+body {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+// variable
+$bg-color: #f9f9f9;
+$bg-white-color:#ffffff;
+$border-color: #d8d8d8;
+$primary-color:#EF85D1;
+$black-color : #121212;
+$danger-color: #ff0000;
+$grey-color: #939393;
+$dark-grey-color : #6c6c6c;
+
+// style
+
+// base style
+.form-control{
+    &:focus{
+        border: 1px solid $border-color;
+        box-shadow: none;
+        outline: none;
+    }
+}
+
+a{
+    text-decoration: none;
+}
+
+// sidebar section
+.sidebar{
+    width: 75%;
+    height: 100vh;
+    background-color: $bg-color;
+    transform: translateX(-150%);
+    transition: transform .3s ease-in-out;
+    border-right: 1px solid $border-color;
+    z-index: 999;
+    overflow-y: auto;
+
+     /* Custom Scrollbar */
+     &::-webkit-scrollbar {
+        width: 1px; 
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $bg-color; 
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $border-color; /* Warna thumb scrollbar */
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: $border-color; /* Warna thumb saat hover */
+    }
+
+    .brand-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        // navbar brand
+        .navbar-brand{
+            color: $primary-color;
+            font-weight:700;
+            font-size: 1.5rem;
+        }
+        // close button
+
+        .btn {
+            font-size: 1.2rem;
+            color: $black-color;
+            &:active {
+                background-color: transparent;
+                border: 0;
+            }
+        }
+        
+    } 
+
+    .navbar-nav{
+        .nav-title{
+            font-size: .9rem;
+            margin-bottom: .3rem;
+        }
+
+        .nav-item{
+            .nav-link{
+                font-size: 1.2rem;
+                padding: .3rem .5rem;
+                margin: .3rem 0;
+                transition: .3s ease-in-out;
+                border: 1px solid transparent;
+                &.active{
+                    border: 1px solid $border-color;
+                    border-radius: .2rem;
+                    transform: translate(-3px, -3px);
+                    box-shadow: 1px 1px 0px 0px $black-color;
+                }
+
+                &:hover{
+                    border: 1px solid $border-color;
+                    border-radius: .2rem;
+                    transition: .3s ease-in-out;
+                    box-shadow: 1px 1px 0px 0px $black-color;
+                    transform: translate(-3px, -3px);
+                }
+
+                span{
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+
+    // sidebar open
+  &.open {
+    transform: translateX(0);
+  }
+}
+
+// content section
+
+.content{
+    width: 100%;
+}
+
+// navbar section
+
+.navbar{
+    border-bottom: 1px solid $border-color;
+    z-index: 998;
+    width: 100%;
+    background-color: $bg-white-color;
+
+    .sidebar-toggler{
+        text-decoration: none;
+        color: $black-color;
+    }
+
+    .btn-icon{
+        border: 1px solid $border-color;
+        border-radius: .4rem;
+        padding: .3rem .6rem;
+        box-sizing: border-box;
+        font-size: 1.2rem;
+        transition: .3s ease-in-out;
+        &:hover{
+            transition: .3s ease-in-out;
+            box-shadow: 1px 1px 0px 0px $black-color;
+            transform: translate(-3px, -3px);
+        }
+      
+    }
+
+    .icon-container{
+        .form-container{
+            border: 1px solid $border-color;
+            border-radius: .4rem;
+
+            .form-control{
+                border: 0;
+                font-size: 1rem;
+                &:focus{
+                    border: 0;
+                }
+            }
+
+            .btn-icon{
+                border: 0;
+                
+                &:hover{
+                    transition: .3s ease-in-out;
+                    box-shadow: none;
+                    transform: translate(0);
+                }
+            }
+        }
+    }
+}
+
+// main content
+.main-content{
+    .card{
+        h5{
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .dropdown{
+            .card-more{
+                font-size: 1.1rem;
+                color: $black-color;
+                font-weight: 700;
+            }
+
+            .dropdown-menu{
+                .dropdown-item{
+                    font-size: .9rem;
+                    margin: .3rem auto;
+
+                    &.danger{
+                        color: $danger-color;
+                    }
+                }
+            }
+        }
+
+        .card-content{
+            h6{
+                font-size: .9rem;
+                color: $dark-grey-color;
+                font-weight: 500;
+            }
+    
+            h1{
+                font-size: 2rem;
+                font-weight: 700;
+
+                small{
+                    font-size: 1.5rem;
+                    color:$grey-color;
+                    font-weight: 400;
+                }
+            }
+
+            small{
+                &.time{
+                    font-size: .8rem;
+                    color: $grey-color;
+                }
+            }
+        }
+
+       
+    }
+}
+
+// modal section
+.modal {
+    z-index: 1050; /* Z-index default Bootstrap untuk modal */
+}
+
+.modal-backdrop.show {
+    display: none;
+}
+
+
+
+// responsive Breakpoint
+
+// small display
+@media screen and (min-width : 576px) {
+    .sidebar{
+        width: 50%;
+    }
+}
+
+// medium display
+@media screen and (min-width : 768px) {
+    .sidebar{
+        width: 35%;
+    }
+}
+
+// large display
+
+@media screen and (min-width : 992px) {
+    .sidebar{
+        width: 25%;
+        transform: translateX(0);
+
+        .brand-container{
+            .navbar-brand{
+                font-size: 5vw;
+            }
+        }
+    }
+
+    // navbar
+    .navbar{
+        margin-left: 25%;
+        width: 75%;
+    }
+
+    // content
+
+    .content{
+        width: 75%;
+        margin-left: 25%;
+    }
+}
