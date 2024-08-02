@@ -13,6 +13,7 @@ $black-color : #121212;
 $danger-color: #ff0000;
 $grey-color: #939393;
 $dark-grey-color : #6c6c6c;
+$success-color: rgb(0, 197, 0);
 
 // style
 
@@ -185,6 +186,16 @@ a{
 // main content
 .main-content{
     .card{
+      
+
+        &.bg-prime{
+            background-color: $bg-color;
+        }
+
+        &.bg-second{
+            background-color: $bg-white-color;
+        }
+
         h5{
             font-size: 1rem;
             font-weight: 700;
@@ -235,7 +246,39 @@ a{
             }
         }
 
-       
+        .card-footer{
+            background-color: $bg-white-color;
+
+            .footer-title{
+                h4{
+                    font-size: 1rem;
+                    color: $dark-grey-color;
+                    font-weight: 400;
+                }
+            }
+
+            .footer-content{
+                h6{
+                    font-size: .9rem;
+                    font-weight: 400;
+                    color: $black-color;
+                }
+
+                p{
+                    strong{
+                        color: $black-color;
+                    }
+
+                    &.success{
+                        color: $success-color;
+                    }
+                    &.danger{
+                        color: $danger-color;
+                    }
+                  
+                }
+            }
+        }
     }
 }
 

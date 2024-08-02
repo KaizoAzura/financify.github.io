@@ -188,11 +188,13 @@
 
       <!-- main content -->
 
-      <section class="main-content mt-5 py-5">
+      <section class="main-content mt-4 py-5">
         <div class="container-fluid px-0">
-          <div class="row">
+          <div class="row mt-3">
+            <!-- first card -->
             <div class="col-12 col-md-6">
-              <div class="card p-3">
+              <div class="card p-3 bg-prime h-100">
+                <!-- card title -->
                 <div
                   class="card-title d-flex align-items-center justify-content-between"
                 >
@@ -223,6 +225,7 @@
                     </ul>
                   </div>
                 </div>
+                <!-- card content -->
                 <div class="card-content mt-3">
                   <h6>Total Balance</h6>
                   <h1>12.324.230<small class="ms-2">USD</small></h1>
@@ -233,8 +236,64 @@
                     <canvas id="financialChart" class="w-100"></canvas>
                   </div>
                 </div>
+
+                <!-- card footer -->
+                <div class="card-footer p-0 mt-3 border-0">
+                  <div
+                    class="footer-title mb-3 d-flex align-items-center justify-content-between"
+                  >
+                    <h4>DESCRIPTION</h4>
+                    <h4>VALUE</h4>
+                  </div>
+                  <!-- footer content 1 -->
+                  <div
+                    class="footer-content d-flex align-items-center justify-content-between"
+                  >
+                    <h6 class="m-0">Average annual profit</h6>
+                    <p class="m-0 success">
+                      <strong>7.96%</strong
+                      ><i class="ri-arrow-up-line ms-1"></i>
+                    </p>
+                  </div>
+                  <!-- footer content 2 -->
+                  <div
+                    class="footer-content mt-2 d-flex align-items-center justify-content-between"
+                  >
+                    <h6 class="m-0">Average annual return</h6>
+                    <p class="m-0 danger">
+                      <strong>3.42%</strong
+                      ><i class="ri-arrow-down-line ms-1"></i>
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
+            <!-- end first card -->
+            <!-- second card -->
+            <div class="col-12 col-md-6">
+              <div class="card p-3 bg-second h-100">
+                <!-- card title -->
+                <div
+                  class="card-title d-flex align-items-center justify-content-between"
+                >
+                  <h5 class="m-0">General Payment</h5>
+                </div>
+                <!-- card content -->
+                <div class="card-content mt-3">
+                  <h6>Payment Statistic</h6>
+                  <h1>40.090.423<small class="ms-2">USD</small></h1>
+                  <small class="time d-flex align-items-center"
+                    >Last Update 1m ago <i class="ri-refresh-line ms-1"></i
+                  ></small>
+                  <div class="col-12 w-100 mt-3">
+                    <canvas id="paymentChart" class="w-100"></canvas>
+                  </div>
+                </div>
+
+                <!-- card footer -->
+              </div>
+            </div>
+            <!-- end second card -->
           </div>
         </div>
       </section>

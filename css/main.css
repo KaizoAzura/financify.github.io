@@ -132,6 +132,12 @@ a {
   transform: translate(0);
 }
 
+.main-content .card.bg-prime {
+  background-color: #f9f9f9;
+}
+.main-content .card.bg-second {
+  background-color: #ffffff;
+}
 .main-content .card h5 {
   font-size: 1rem;
   font-weight: 700;
@@ -165,6 +171,28 @@ a {
 .main-content .card .card-content small.time {
   font-size: 0.8rem;
   color: #939393;
+}
+.main-content .card .card-footer {
+  background-color: #ffffff;
+}
+.main-content .card .card-footer .footer-title h4 {
+  font-size: 1rem;
+  color: #6c6c6c;
+  font-weight: 400;
+}
+.main-content .card .card-footer .footer-content h6 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #121212;
+}
+.main-content .card .card-footer .footer-content p strong {
+  color: #121212;
+}
+.main-content .card .card-footer .footer-content p.success {
+  color: rgb(0, 197, 0);
+}
+.main-content .card .card-footer .footer-content p.danger {
+  color: #ff0000;
 }
 
 .modal {
